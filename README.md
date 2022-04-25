@@ -11,7 +11,7 @@ git clone https://github.com/webdevsint/commands
 ## Usage
 - navigate to the `commands/commands.js` file. <br>
 - all your commands should will be objects within the commands array. <br>
-a command object has a primary keyword, a short keyword (optional) and a handler function. 
+a typical command object has a primary keyword, a short keyword (optional) and a handler function. 
 
 ```
 const commands = [
@@ -39,6 +39,24 @@ here, the example command:
     },
   },
 ```
+## Dynamic Commands
+dynamic commands do not have any predefined primary or secondary keywords, instead they only have a starting keyword. <br>
+eg. `.thank tahlil`, here `.thank` is predefined but anything after it is dynamic.
+
+here, an example command:
+
+```
+  {
+    dynamic: ".thank",
+    handler: (msg) => {
+      const person = msg.content.split(" ");
+      const message = person.shift();
+      
+      msg.channel.send(`thank you ${person}`);
+    },
+  },
+```
+
 that's about it.
 
 ### Note: 
