@@ -47,7 +47,7 @@ here, an example command:
 
 ```
   {
-    dynamic: ".thank",
+    dynamic: ".thank",           // dynamic keyword
     handler: (msg) => {
       const person = msg.content.split(" ");
       const message = person.shift();
