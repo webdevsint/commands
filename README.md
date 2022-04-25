@@ -3,7 +3,7 @@ commands is a discord.js@12 command handler.
 thanks to the very little effort put into it, its very tiny.
 
 ## Installation
-just clone this git repository
+just clone this git repository, it's a boilerplate bot template with commands integrated.
 ```
 git clone https://github.com/webdevsint/commands
 ```
