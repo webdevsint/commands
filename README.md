@@ -49,8 +49,8 @@ here, an example command:
   {
     dynamic: ".thank",           // dynamic keyword
     handler: (msg) => {
-      const person = msg.content.split(" ");
-      const message = person.shift();
+      const message = msg.content.split(" ");
+      const person = message.shift();
       
       msg.channel.send(`thank you ${person}`);
     },
